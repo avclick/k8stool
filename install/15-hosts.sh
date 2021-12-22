@@ -1,1 +1,2 @@
-echo "10.0.0.28 pod1.avclick.ru" |sudo tee -a /etc/hosts
+source .config.sh
+echo "$POD_INTERNAL_IP $POD_HOSTNAME" |sudo tee -a /etc/hosts
