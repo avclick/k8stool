@@ -9,5 +9,5 @@ data:
     - name: default
       protocol: layer2
       addresses:
-      - 130.61.21.115/32 ## replace with your instance's IP
+      - $POD_PUBLIC_IP_NET ## replace with your instance's IP
 
