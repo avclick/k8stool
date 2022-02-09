@@ -15,7 +15,7 @@ spec:
   selector:
     matchLabels:
       app: test
-  replicas: 4
+  replicas: 2
   strategy:
     type: RollingUpdate
     rollingUpdate:
@@ -39,16 +39,16 @@ spec:
             limits:
               memory: "500Mi"
               cpu: "500m"
-      affinity:
-        podAntiAffinity: ## spread pods across nodes
-          requiredDuringSchedulingIgnoredDuringExecution:
-            - labelSelector:
-                matchExpressions:
-                  - key: app
-                    operator: In
-                    values:
-                      - test
-              topologyKey: "kubernetes.io/hostname"
+#      affinity:
+#        podAntiAffinity: ## spread pods across nodes
+#          requiredDuringSchedulingIgnoredDuringExecution:
+#            - labelSelector:
+#                matchExpressions:
+#                  - key: app
+#                    operator: In
+#                    values:
+#                      - test
+#              topologyKey: "kubernetes.io/hostname"
 ---
 apiVersion: v1
 kind: Service
