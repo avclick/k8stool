@@ -1,5 +1,6 @@
+set -e
 source .config.sh
-sudo kubeadm init
+sudo kubeadm init |tee -a $HOME/kubeadm.log
 
 mkdir -p $HOME/.kube
 sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
