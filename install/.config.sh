@@ -1,5 +1,5 @@
-export POD_HOSTNAME="pod1.avclick.ru"
-export POD_INTERNAL_IP="10.0.0.28"
+export POD_HOSTNAME="cp.iconicompany.com"
+export POD_INTERNAL_IP="10.71.0.1"
 export POD_PUBLIC_IP="130.61.21.115"
 export POD_PUBLIC_IP_NET=$POD_PUBLIC_IP/32
 export POD_PUBLIC_IP2="130.61.21.115"
